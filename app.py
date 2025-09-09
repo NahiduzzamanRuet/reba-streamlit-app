@@ -2,8 +2,8 @@ import streamlit as st
 import numpy as np
 import joblib
 
-# Load trained model
-model = joblib.load("reba_model.pkl")
+import skops.io as sio
+model = sio.load("reba_model.skops", trusted=True)
 
 st.title("REBA Score Predictor")
 st.write("Enter joint angles to get a predicted REBA score")
