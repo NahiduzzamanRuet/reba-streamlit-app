@@ -1,8 +1,7 @@
 import streamlit as st
 import numpy as np
-import joblib
-
 import skops.io as sio
+
 model = sio.load("reba_model.skops", trusted=True)
 
 st.title("REBA Score Predictor")
